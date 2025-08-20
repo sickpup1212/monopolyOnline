@@ -65,7 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const propertyImageMap = {
-        'Mediterranean Ave': 'https://i.postimg.cc/02b9FT2y/Mediteranian-Ave.jpg', 'Baltic Ave': 'https://i.postimg.cc/brvqzMxL/33900e0c-9d96-4bf5-98bb-ba910adf0c38.jpg', 'Reading Railroad': 'https://i.postimg.cc/K8SCfw1V/Reading-RR.jpg', 'Oriental Ave': 'https://i.postimg.cc/MTKCRBnp/Oriental-Ave.jpg', 'Vermont Ave': 'https://i.postimg.cc/MH4JzGKK/vermontave.jpg', 'Connecticut Ave': 'https://i.postimg.cc/brvqzMxL/33900e0c-9d96-4bf5-98bb-ba910adf0c38.jpg', 'St. Charles Place': 'https://i.postimg.cc/mDmG6wv9/St-Charles-Place.jpg', 'Electric Company': 'https://i.postimg.cc/T3VF40mP/electric-Company.jpg', 'States Ave': 'https://i.postimg.cc/zDPrCxSZ/States-Ave.jpg', 'Virginia Ave': 'https://i.postimg.cc/x8qSrmQ4/virginia-Ave.jpg', 'Pennsylvania Railroad': 'https://i.postimg.cc/XqtmTDQr/Penslyvania-RR.jpg', 'St. James Place': 'https://i.postimg.cc/DZvTgDMF/St-James-Place.jpg', 'Tennessee Ave': 'https://i.postimg.cc/BQrfytVm/tennessee-Ave.jpg', 'New York Ave': 'https://i.postimg.cc/8PJVtLtF/New-York-Ave.jpg', 'Kentucky Ave': 'https://i.postimg.cc/k5FCW9wf/Kentucky-Ave.jpg', 'Indiana Ave': 'https://i.postimg.cc/5t1d4T1v/Indiana-Ave.jpg', 'Illinois Ave': 'https://i.postimg.cc/dVGcKwMw/illinois-Ave.jpg', 'B&O Railroad': 'https://i.postimg.cc/pV020WvS/BandORR.jpg', 'Atlantic Ave': 'https://i.postimg.cc/R0z93q1W/atlantic-Ave.jpg', 'Ventnor Ave': 'https://i.postimg.cc/Y9nJxSFf/Ventor-Ave.jpg', 'Water Works': 'https://i.postimg.cc/MGzN2Bbm/waterworks.jpg', 'Marvin Gardens': 'https://i.postimg.cc/YS3chRqP/Marvin-Gardens.jpg', 'Pacific Ave': 'https://i.postimg.cc/Kjsx4NQb/Pasific-Ave.jpg', 'North Carolina Ave': 'https://i.postimg.cc/13Fs5DFx/NOCarolina-Ave.jpg', 'Pennsylvania Ave': 'https://i.postimg.cc/L6wmpxnB/Pennsylvania-Ave.jpg', 'Short Line Railroad': 'https://i.postimg.cc/rsD7ZLC6/Shortline-RR.jpg', 'Park Place': 'https://i.postimg.cc/dtTz8wVr/Park-Place.jpg', 'Boardwalk': 'https://i.postimg.cc/ZYQGBC4J/boardwalk.jpg'
+        'Mediterranean Ave': 'propertyimages/final_props/MediterraneanAve.png',
+        'Baltic Ave': 'propertyimages/final_props/BalticAve.png',
+        'Reading Railroad': 'propertyimages/final_props/ReadingRR.jpg',
+        'Oriental Ave': 'propertyimages/final_props/OrientalAve.png',
+        'Vermont Ave': 'propertyimages/final_props/VermontAve.png',
+        'Connecticut Ave': 'propertyimages/final_props/ConnecticutAve.png',
+        'St. Charles Place': 'propertyimages/final_props/StCharlesPlace.png',
+        'Electric Company': 'propertyimages/final_props/ElectricCompany.png',
+        'States Ave': 'propertyimages/final_props/StatesAve.png',
+        'Virginia Ave': 'propertyimages/final_props/VirginiaAve.png',
+        'Pennsylvania Railroad': 'propertyimages/final_props/PenslyvaniaRR.jpg',
+        'St. James Place': 'propertyimages/final_props/StJamesPlace.png',
+        'Tennessee Ave': 'propertyimages/final_props/TennesseeAve.png',
+        'New York Ave': 'propertyimages/final_props/NewYorkAve.png',
+        'Kentucky Ave': 'propertyimages/final_props/KentuckyAve.png',
+        'Indiana Ave': 'propertyimages/final_props/IndianaAve.png',
+        'Illinois Ave': 'propertyimages/final_props/IllinoisAve.png',
+        'B&O Railroad': 'propertyimages/final_props/BandORR.jpg',
+        'Atlantic Ave': 'propertyimages/final_props/AtlanticAve.png',
+        'Ventnor Ave': 'propertyimages/final_props/VentnorAve.png',
+        'Water Works': 'propertyimages/final_props/WaterWorks.png',
+        'Marvin Gardens': 'propertyimages/final_props/MarvinGardens.png',
+        'Pacific Ave': 'propertyimages/final_props/PacificAve.png',
+        'North Carolina Ave': 'propertyimages/final_props/NorthCarolinaAve.png',
+        'Pennsylvania Ave': 'propertyimages/final_props/PennsylvaniaAve.png',
+        'Short Line Railroad': 'propertyimages/final_props/ShortlineRR.jpg',
+        'Park Place': 'propertyimages/final_props/ParkPlace.png',
+        'Boardwalk': 'propertyimages/final_props/Boardwalk.png'
     };
 
     const allChanceCards = [
