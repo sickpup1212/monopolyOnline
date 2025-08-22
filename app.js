@@ -119,12 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
         {type: 'collect_money', name: 'From sale of stock you get $45', amount: 45, image: 'communitychestimages/stock_sale.png'},
         {type: 'get_out_of_jail_free', name: 'Get out of Jail Free', image: 'communitychestimages/get_out_of_jail.png'},
         {type: 'go_to_jail', name: 'Go to Jail. Go directly to jail, do not pass Go, do not collect $200', image: 'communitychestimages/go_to_jail.png'},
-        {type: 'collect_money', name: 'Xmas fund matures. Receive $100', amount: 100, image: 'communitychestimages/xmas_fund_matures.png},
+        {type: 'collect_money', name: 'Xmas fund matures. Receive $100', amount: 100, image: 'communitychestimages/xmas_fund_matures.png'},
         {type: 'collect_money', name: 'Income tax refund. Collect $20', amount: 20, image: 'communitychestimages/imcome_tax_refund.png'},
         {type: 'all_pay_one', name: "Grand Opera opening. Collect $50 from every player.", amount: 10, image: 'communitychestimages/grand_opera.png'},
         {type: 'collect_money', name: 'Life insurance matures. Collect $100', amount: 100}, {type: 'pay_tax', name: 'Pay hospital fees of $100', amount: 100, image: 'communitychestimages/life_insurance_matures.png'},
         {type: 'pay_tax', name: 'Pay school tax of $150', amount: 150, image: 'communitychestimages/pay_school_tax.png'},
-        {type: 'pay_tax', name: 'Doctor's fee pay $50', amount: 50, image: 'communitychestimages/doctors_fee.png'},
+        {type: 'pay_tax', name: 'Doctors fee pay $50', amount: 50, image: 'communitychestimages/doctors_fee.png'},
         {type: 'pay_tax', name: 'Pay hospital $100', amount: 100, image: 'communitychestimages/pay_hospital.png'},
         {type: 'collect_money', name: 'Receive $25 for services', amount: 25, image: 'communitychestimages/receive_for_services.png'},
         {type: 'repairs', name: 'You are assessed for street repair. $40 per house. $115 per hotel', houseCost: 40, hotelCost: 115, image: 'communitychestimages/assesed_street_repairs.png'},
@@ -1330,9 +1330,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const player = gameState.players[playerIndex];
         switch (card.type) {
             case 'advance_to':
-                const currentPos = player.position;
-                const targetPos = card.target;
-                const steps = (targetPos > currentPos) ? targetPos - currentPos : (40 - currentPos) + targetPos;
+                let currentPos = player.position;
+                let targetPos = card.target;
+                let steps = (targetPos > currentPos) ? targetPos - currentPos : (40 - currentPos) + targetPos;
                 await movePlayer(playerIndex, steps);
                 handleSpaceLanding(playerIndex, player.position);
                 break;
@@ -1341,8 +1341,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 handleSpaceLanding(playerIndex, player.position);
                 break;
             case 'advance_to_nearest':
-                const currentPos = player.position;
-                const targetPos = card.target;
+                currentPos = player.position;
                 let closestPoint = targetList[0];
                 let smallestDistance = Math.abs(currentPos - targetList[0]);
                 for (let i = 1; i < targetList.length; i++) {
@@ -1352,10 +1351,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         closestPoint = targetList[i];
                     }
                 }
-                const steps = (closestPoint > currentPos) ? closestPoint - currentPos : (40 - currentPos) + closestPoint;
+                steps = (closestPoint > currentPos) ? closestPoint - currentPos : (40 - currentPos) + closestPoint;
                 await movePlayer(playerIndex, steps);
                 handleSpaceLanding(playerIndex, player.position);
-                break;           
+                break;
             case 'go_to_jail':
                 await movePlayerToJail(playerIndex);
                 endTurn();
