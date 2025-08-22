@@ -96,11 +96,40 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const allChanceCards = [
-        { type: 'advance_to', name: 'Advance to Go', target: 0, collectGo: true }, { type: 'advance_to', name: 'Advance to Illinois Ave', target: 24, collectGo: true }, { type: 'advance_to', name: 'Advance to St. Charles Place', target: 11, collectGo: true }, { type: 'advance_to_nearest_group', name: 'Advance to nearest Utility', group: 'utility', multiplier: 10 }, { type: 'advance_to_nearest_group', name: 'Advance to nearest Railroad', group: 'railroad', multiplier: 2 }, { type: 'advance_to_nearest_group', name: 'Advance to nearest Railroad', group: 'railroad', multiplier: 2 }, { type: 'collect_money', name: 'Bank pays you dividend of $50', amount: 50 }, { type: 'get_out_of_jail_free', name: 'Get out of Jail Free' }, { type: 'go_back_spaces', name: 'Go back 3 spaces', spaces: 3 }, { type: 'go_to_jail', name: 'Go directly to Jail' }, { type: 'repairs', name: 'Make general repairs on all your property', houseCost: 25, hotelCost: 100 }, { type: 'pay_tax', name: 'Pay poor tax of $15', amount: 15 }, { type: 'advance_to', name: 'Take a trip to Reading Railroad', target: 5, collectGo: true }, { type: 'advance_to', name: 'Take a walk on the Boardwalk', target: 39, collectGo: false }, { type: 'pay_other_players', name: 'You have been elected Chairman of the Board', amount: 50 }, { type: 'collect_money', name: 'Your building loan matures. Collect $150', amount: 150 }
+        {type: 'advance_to', name: 'Advance to Go', target: 0, collectGo: true, image: 'chanceimages/advance_to_go.png'},
+        {type: 'advance_to', name: 'Advance to Illinois Ave', target: 24, collectGo: true, image: 'chanceimages/advance_to_illinois.png'},
+        {type: 'advance_to', name: 'Advance to St.Charles Place', target: 11, collectGo: true, image: 'chanceimages/advance_to_stCharles.png'}, 
+        {type: 'advance_to_nearest', name: 'Advance to nearest Utility', target: [12, 28], collectGo: true, image: 'chanceimages/advance_to_utility.png'},
+        {type: 'collect_money', name: 'Bank pays you dividend of $50', amount: 50, image: 'chanceimages/bank_dividend.png'},
+        {type: 'get_out_of_jail_free', name: 'Get out of Jail Free', image: 'chanceimages/out_of_jail.png'},
+        {type: 'move_backwards_three', name: 'Go back 3 spaces', spaces: 3, collectGo: false, image: 'chanceimages/back_three_spaces.png'},
+        {type: 'go_to_jail', name: 'Go directly to Jail', image: 'chanceimages/directly_to_jail.png'},
+        {type: 'repairs', name: 'Make general repairs on all your property', houseCost: 25, hotelCost: 100, image: 'chanceimages/property_repairs.png'},
+        {type: 'pay_tax', name: 'Pay poor tax of $15', amount: 15, image: 'chanceimages/poor_tax.png'},
+        {type: 'advance_to_nearest', name: 'Advance to the nearest Railroad', target: [5, 15, 25, 35], collectGo: true, image: 'chanceimages/advance_to_nearest_Rr.png'},
+        {type: 'advance_to', name: 'Take a walk on the Boardwalk', target: 39, collectGo: false, image: 'chanceimages/advance_to_boardwalk.png'},
+        {type: 'pay_other_players', name: 'You have been elected Chairman of the Board', amount: 50, image: 'chanceimages/elected_chairman.png'}, 
+        {type: 'collect_money', name: 'Your building loan matures. Collect $150', amount: 150, image: 'chanceimages/building_load_mature.png'},
+        { type: 'advance_to', name: 'Take a trip to Reading Railroad', target: 5, collectGo: true, image: 'chanceimages/ride_to_rr.png'},
     ];
 
     const allCommunityCards = [
-        { type: 'advance_to', name: 'Advance to Go', target: 0, collectGo: true }, { type: 'collect_money', name: 'Bank error in your favor. Collect $200', amount: 200 }, { type: 'collect_money', name: 'From sale of stock you get $50', amount: 50 }, { type: 'get_out_of_jail_free', name: 'Get out of Jail Free' }, { type: 'go_to_jail', name: 'Go to Jail. Go directly to jail, do not pass Go, do not collect $200' }, { type: 'collect_money', name: 'Holiday fund matures. Receive $100', amount: 100 }, { type: 'collect_money', name: 'Income tax refund. Collect $20', amount: 20 }, { type: 'all_pay_one', name: "It is your birthday. Collect $10 from every player", amount: 10 }, { type: 'collect_money', name: 'Life insurance matures. Collect $100', amount: 100 }, { type: 'pay_tax', name: 'Pay hospital fees of $100', amount: 100 }, { type: 'pay_tax', name: 'Pay school fees of $50', amount: 50 }, { type: 'collect_money', name: 'Receive $25 consultancy fee', amount: 25 }, { type: 'repairs', name: 'You are assessed for street repair. $40 per house. $115 per hotel', houseCost: 40, hotelCost: 115 }, { type: 'collect_money', name: 'You have won second prize in a beauty contest. Collect $10', amount: 10 }, { type: 'collect_money', name: 'You inherit $100', amount: 100 }
+        {type: 'advance_to', name:'Advance to Go', target: 0, collectGo: true, image: 'communitychestimages/advance_to_go.png'},
+        {type: 'collect_money', name: 'Bank error in your favor. Collect $200', amount: 200, image: 'communitychestimages/bank_error.png'},
+        {type: 'collect_money', name: 'From sale of stock you get $45', amount: 45, image: 'communitychestimages/stock_sale.png'},
+        {type: 'get_out_of_jail_free', name: 'Get out of Jail Free', image: 'communitychestimages/get_out_of_jail.png'},
+        {type: 'go_to_jail', name: 'Go to Jail. Go directly to jail, do not pass Go, do not collect $200', image: 'communitychestimages/go_to_jail.png'},
+        {type: 'collect_money', name: 'Xmas fund matures. Receive $100', amount: 100, image: 'communitychestimages/xmas_fund_matures.png},
+        {type: 'collect_money', name: 'Income tax refund. Collect $20', amount: 20, image: 'communitychestimages/imcome_tax_refund.png'},
+        {type: 'all_pay_one', name: "Grand Opera opening. Collect $50 from every player.", amount: 10, image: 'communitychestimages/grand_opera.png'},
+        {type: 'collect_money', name: 'Life insurance matures. Collect $100', amount: 100}, {type: 'pay_tax', name: 'Pay hospital fees of $100', amount: 100, image: 'communitychestimages/life_insurance_matures.png'},
+        {type: 'pay_tax', name: 'Pay school tax of $150', amount: 150, image: 'communitychestimages/pay_school_tax.png'},
+        {type: 'pay_tax', name: 'Doctor's fee pay $50', amount: 50, image: 'communitychestimages/doctors_fee.png'},
+        {type: 'pay_tax', name: 'Pay hospital $100', amount: 100, image: 'communitychestimages/pay_hospital.png'},
+        {type: 'collect_money', name: 'Receive $25 for services', amount: 25, image: 'communitychestimages/receive_for_services.png'},
+        {type: 'repairs', name: 'You are assessed for street repair. $40 per house. $115 per hotel', houseCost: 40, hotelCost: 115, image: 'communitychestimages/assesed_street_repairs.png'},
+        {type: 'collect_money', name: 'You have won second prize in a beauty contest. Collect $10', amount: 10, image: 'communitychestimages/beauty_contest.png'},
+        {type: 'collect_money', name: 'You inherit $100', amount: 100, image: 'communitychestimages/you_inherit.png'},
     ];
 
     // --- GAME STATE MANAGEMENT ---
@@ -1307,6 +1336,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 await movePlayer(playerIndex, steps);
                 handleSpaceLanding(playerIndex, player.position);
                 break;
+            case 'move_backwards_three':
+                await movePlayer(playerIndex, 37);
+                handleSpaceLanding(playerIndex, player.position);
+                break;
+            case 'advance_to_nearest':
+                const currentPos = player.position;
+                const targetPos = card.target;
+                let closestPoint = targetList[0];
+                let smallestDistance = Math.abs(currentPos - targetList[0]);
+                for (let i = 1; i < targetList.length; i++) {
+                    const distance = Math.abs(currentPos - targetList[i]);
+                    if (distance < smallestDistance || (distance === smallestDistance && targetList[i] > closestPoint)) {
+                        smallestDistance = distance;
+                        closestPoint = targetList[i];
+                    }
+                }
+                const steps = (closestPoint > currentPos) ? closestPoint - currentPos : (40 - currentPos) + closestPoint;
+                await movePlayer(playerIndex, steps);
+                handleSpaceLanding(playerIndex, player.position);
+                break;           
             case 'go_to_jail':
                 await movePlayerToJail(playerIndex);
                 endTurn();
@@ -1326,7 +1375,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 logMessage(`Card type "${card.type}" not yet implemented.`);
         }
     }
-
 
     // --- MORTGAGE LOGIC ---
 
